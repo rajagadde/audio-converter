@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audio Converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            font-family: Arial;
+            background:#111;
+            color:white;
+            text-align:center;
+            padding-top:80px;
+        }
+        .box{
+            background:#222;
+            padding:30px;
+            border-radius:10px;
+            width:90%;
+            max-width:400px;
+            margin:auto;
+        }
+        select, input, button{
+            width:100%;
+            padding:10px;
+            margin-top:15px;
+            border-radius:5px;
+            border:none;
+        }
+        button{
+            background:#00ff88;
+            font-weight:bold;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
 
+<div class="box">
+    <h2>Audio Converter (Max 50MB)</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="audio" required>
+        <select name="format" required>
+            <option value="mp3">MP3</option>
+            <option value="wav">WAV</option>
+            <option value="aac">AAC</option>
+            <option value="flac">FLAC</option>
+            <option value="ogg">OGG</option>
+            <option value="mpeg">MPEG</option>
+            <option value="m4a">M4A</option>
+            <option value="opus">OPUS</option>
+        </select>
+        <button type="submit">Convert</button>
+    </form>
+</div>
+
+</body>
+</html>
